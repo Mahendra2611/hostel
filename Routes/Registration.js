@@ -49,7 +49,7 @@ RegistrationRouter.post("/api/login",async(req,res)=>{
                        email:UserData.email
                     }
                 },
-                "djhsf76r4",
+                process.env.JWT_ACCESS_TOKEN,
             {expiresIn:"1h"})
             return res.status(200).send({msg:token})
             }
